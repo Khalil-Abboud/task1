@@ -36,7 +36,7 @@ public class Main {
             System.out.print(num + " ");
         }
         // ---------------------------------------------------------
-        int[] arr3 = { 18, 90, 7, 28, 45, 2 };
+        int[] arr3 = { 18, 90, 7, 28, 45, 2, 256, 1024, 512, 64 };
 
         System.out.println("\nArray before sorting:");
         for (int num : arr3) {
@@ -48,6 +48,20 @@ public class Main {
 
         System.out.println("\nArray after InsertionSort sorting:");
         for (int num : arr3) {
+            System.out.print(num + " ");
+        }
+        // ---------------------------------------------------------
+        int[] arr4 = { 8, 105, 77, 3, 1001, 555, 24, 65, 29, 99 };
+
+        System.out.println("Array before sorting:");
+        for (int num : arr4) {
+            System.out.print(num + " ");
+        }
+        MergeSort MS = new MergeSort();
+        MS.mergeSort(arr4);
+
+        System.out.println("\nArray after MergeSort sorting:");
+        for (int num : arr4) {
             System.out.print(num + " ");
         }
     }
