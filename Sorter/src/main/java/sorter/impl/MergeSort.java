@@ -1,3 +1,5 @@
+package sorter.impl;
+
 public class MergeSort {
     public void mergeSort(int[] myArray) {
         if (myArray.length <= 1) {

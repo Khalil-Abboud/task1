@@ -1,3 +1,8 @@
+import sorter.impl.BubbleSort;
+import sorter.impl.InsertionSort;
+import sorter.impl.MergeSort;
+import sorter.impl.SelectionSort;
+
 public class Main {
     /*
      * Реализовать интерфейс сортировщик
