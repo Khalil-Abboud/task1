@@ -10,6 +10,7 @@ public class SequenceGenTest {
         SequenceGen.sequenceGen(ar,a,b);
         for(int i=0;i<ar.length;i++){
             Assertions.assertThat(ar[i]).isBetween(a,b);
+
         }
     }
 
