@@ -1,3 +1,7 @@
+package sorter.impl;
+
+import sorter.Sorter;
+
 public class BubbleSort implements Sorter {
 
     public void sorter(int[] myArray) {

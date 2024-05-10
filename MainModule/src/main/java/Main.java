@@ -1,14 +1,31 @@
+import java.util.Scanner;
+import sorter.impl.BubbleSort;
+import sorter.impl.InsertionSort;
+import sorter.impl.MergeSort;
+import sorter.impl.SelectionSort;
+
 public class Main {
     /*
      * Реализовать интерфейс сортировщик
-     * Реализовать три имплементации интерфейса
+     * Реализовать 4 имплементации интерфейса
      * Вывести в консоль результаты работы на примере из массива 10 чисел
      */
     public static void main(String[] args) {
-
-        int[] arr1 = { 8, 4, 1, 9, 2, 0, 6, 3, 7, 5 };
-
-        System.out.println("Array before sorting:");
+        Scanner input = new Scanner(System.in);
+        int[] arr1 = new int[10];
+        int[] arr2 = new int[10];
+        int[] arr3 = new int[10];
+        int[] arr4 = new int[10];
+        System.out.println("enter the range of the generated sequences (integer)");
+        System.out.println("min value = ");
+        int a = input.nextInt();
+        System.out.println("max value = ");
+        int b = input.nextInt();
+        SequenceGen.sequenceGen(arr1,a,b);
+        SequenceGen.sequenceGen(arr2,a,b);
+        SequenceGen.sequenceGen(arr3,a,b);
+        SequenceGen.sequenceGen(arr4,a,b);
+        System.out.println("An array before sorting:");
         for (int num : arr1) {
             System.out.print(num + " ");
         }
@@ -16,14 +33,12 @@ public class Main {
         BubbleSort BS = new BubbleSort();
         BS.sorter(arr1);
 
-        System.out.println("\nArray after BubbleSort sorting:");
+        System.out.println("\nThe array after BubbleSort sorting:");
         for (int num : arr1) {
             System.out.print(num + " ");
         }
         // ---------------------------------------------------------
-        int[] arr2 = { 15, 44, 2, 34, 70, 15, 7, 18, 90, 57 };
-
-        System.out.println("\nArray before sorting:");
+        System.out.println("\nAn array before sorting:");
         for (int num : arr2) {
             System.out.print(num + " ");
         }
@@ -31,14 +46,12 @@ public class Main {
         SelectionSort SS = new SelectionSort();
         SS.sorter(arr2);
 
-        System.out.println("\nArray after SelectionSort sorting:");
+        System.out.println("\nThe array after SelectionSort sorting:");
         for (int num : arr2) {
             System.out.print(num + " ");
         }
         // ---------------------------------------------------------
-        int[] arr3 = { 18, 90, 7, 28, 45, 2, 256, 1024, 512, 64 };
-
-        System.out.println("\nArray before sorting:");
+        System.out.println("\nAn array before sorting:");
         for (int num : arr3) {
             System.out.print(num + " ");
         }
@@ -46,21 +59,19 @@ public class Main {
         InsertionSort IS = new InsertionSort();
         IS.sorter(arr3);
 
-        System.out.println("\nArray after InsertionSort sorting:");
+        System.out.println("\nThe array after InsertionSort sorting:");
         for (int num : arr3) {
             System.out.print(num + " ");
         }
         // ---------------------------------------------------------
-        int[] arr4 = { 8, 105, 77, 3, 1001, 555, 24, 65, 29, 99 };
-
-        System.out.println("Array before sorting:");
+        System.out.println("\nAn array before sorting:");
         for (int num : arr4) {
             System.out.print(num + " ");
         }
         MergeSort MS = new MergeSort();
-        MS.mergeSort(arr4);
+        MS.sorter(arr4);
 
-        System.out.println("\nArray after MergeSort sorting:");
+        System.out.println("\nThe array after MergeSort sorting:");
         for (int num : arr4) {
             System.out.print(num + " ");
         }

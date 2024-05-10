@@ -1,3 +1,7 @@
+package sorter.impl;
+
+import sorter.Sorter;
+
 public class SelectionSort implements Sorter {
     public void sorter(int[] myArray) {
         int n = myArray.length;
