@@ -69,7 +69,7 @@ public class Main {
             System.out.print(num + " ");
         }
         MergeSort MS = new MergeSort();
-        MS.mergeSort(arr4);
+        MS.sorter(arr4);
 
         System.out.println("\nThe array after MergeSort sorting:");
         for (int num : arr4) {

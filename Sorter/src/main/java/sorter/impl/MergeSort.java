@@ -1,7 +1,9 @@
 package sorter.impl;
 
-public class MergeSort {
-    public void mergeSort(int[] myArray) {
+import sorter.Sorter;
+
+public class MergeSort implements Sorter {
+    public void sorter(int[] myArray) {
         if (myArray.length <= 1) {
             return;
         }
@@ -13,8 +15,8 @@ public class MergeSort {
         System.arraycopy(myArray, 0, left, 0, mid);
         System.arraycopy(myArray, mid, right, 0, myArray.length - mid);
 
-        mergeSort(left);
-        mergeSort(right);
+        sorter(left);
+        sorter(right);
 
         merge(myArray, left, right);
     }
