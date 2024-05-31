@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Static analyse") {
             when {
-                branch 'feature-*'
+                branch 'develop-branch'
             }
             steps {
                 bat 'mvn checkstyle:check'
