@@ -9,7 +9,7 @@ pipeline {
         }
         stage("Tests") {
             when {
-                branch 'develop-branch'
+                branch 'feature-*'
             }
             steps {
                 bat 'mvn test'
@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Static analyse") {
             when {
-                branch 'feature-*'
+                branch 'develop-branch'
             }
             steps {
                 bat 'mvn checkstyle:check'
