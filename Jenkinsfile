@@ -20,8 +20,7 @@ pipeline {
                 branch 'develop-branch'
             }
             steps {
-                bat 'mvn pmd:pmd'
-                bat 'mvn checkstyle:checkstyle'
+                bat 'mvn checkstyle:check'
             }
         }
         stage("Report") {
