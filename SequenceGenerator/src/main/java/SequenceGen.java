@@ -7,6 +7,6 @@ public class SequenceGen {
             }
         }
         public static void test4(){
-            System.out.println("hello word");
+            System.out.println("hello wod");
         }
     }
